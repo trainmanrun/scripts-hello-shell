@@ -1,4 +1,11 @@
 language: generic
-sudo: required
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: FUgQGCPpnmDcYarFlCQDmzck21A6ojuN4PQGkd9HhMj/yiwK4Z91ubtJGV3iLJIeLftsqeK3wZbGQ30IkUhp6uqFk6rmzyQvrQEQWKG6m3MGePBJksLjRbXDQ547L1rWRdALsY63IllXAdDqPSyFhLfz9uiOpr4NPHB+oIy4Imz82CVhmv7w7gY1xFT65mlXn5CnfS2GCToQxz4BRJhSuUCYpccx2/u/ON9GPZaJbp2xtqeDWhWv9vqRU/g/vPzmI0oZ9hsdoxS+t7urCqu6V4n29o/tAS4k8oMSNP+qqVp3VH/F8cdAfXUgdkqgBBOwHrM3HUpaPCkHRaASbFH1aSNsaYhKAGVGp+ivrARGvwFd2zvIriOqF3mZ37uwldvFJHgTVp6PoCGyVq3BJ4J48Pc1u52+pz4uLfQbhcQyWqaR8nCHJFbywlyyt59Rd2QOZKgyDWSlR5JmCkCnMcObaG/NvjDQPZ9EFNsaMSrfqAL+/1PJwGDHx7SdTeHRh6+x/WyKyQQiSWKu22FKeq5+q4/9qXAfcTKhkTuriLuR14nTMJ20t07NndTxA1+alBAUyo9tPE3xYam+haWPtlPUddP0oKyFS1lKETGyUHowgwgaznQzbZ2XR7RhF6tptzN8wt2G20L3yle04hQfoKS2P5LuNYur61mcuIEBi8A4FKE=
+  file: "hello.sh"
+  on:
+    repo: trainmanrun/scripts-hello-shell
+    tags: true
